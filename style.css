@@ -1,0 +1,323 @@
+.portfolioImage {
+    display: block;
+    /* min-height: 100px; */
+    width: 100%;
+    margin-bottom: 16px;
+    transition: 0.2s;
+}
+
+.portfolioImage:hover {
+    cursor: pointer;
+    transform: rotate(-5deg) scale(1.05);
+}
+
+.portfolioGallery {
+    column-count: 3;
+    column-fill: balance;
+    column-gap:1rem;
+    padding-left: var(--sidepadding);
+    padding-right: var(--sidepadding);
+    margin-left: var(--sidemargine);
+    margin-right: var(--sidemargine);
+}
+.gallery{
+    padding-left: var(--sidepadding);
+    padding-right: var(--sidepadding);
+    margin-left: var(--sidemargine);
+    margin-right: var(--sidemargine);
+}
+.content{
+    margin: 1rem;
+    margin-top: 0px;
+}
+
+.procces{
+    display: inline-block;
+}
+
+.procces img{
+    padding-right: 0.8rem;
+    padding-bottom: 0.5rem;
+    height: 150px;
+    transition: 0.4s;
+    cursor: pointer;
+}
+.procces img:hover{
+   transform: scale(1.1);
+}
+
+.sketches {
+    height: 400px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scroll-snap-type: x proximity;
+    white-space: nowrap;
+}
+.sketches img{
+    scroll-snap-align: center;
+    height: 400px;
+    margin-right: 1rem;
+    transition-duration: 0.5s;
+}
+.sketches img:hover{
+    z-index: 2;
+}
+
+.sketchBox{
+    padding-left: var(--sidepadding);
+    padding-right: var(--sidepadding);
+    margin-left: var(--sidemargine);
+    margin-right: var(--sidemargine);
+    column-count: 3;
+    column-fill: balance;
+    column-gap:1rem;
+}
+.sketch{
+    width: 100%;
+}
+/* ::-webkit-scrollbar {
+    display: none;
+} */
+
+h1 {
+    transform: rotate(-3deg);
+    font-family: "Bookmania", Georgia, 'Times New Roman', Times, serif;
+    font-size: 4rem;
+    margin-top: 1.2rem;
+    margin-bottom: 2.5rem;
+    text-align: center;
+    line-height: 4.2rem;
+    color: var(--color4);
+
+    -moz-font-feature-settings: "salt" 9;
+    -webkit-font-feature-settings: "salt" 9;
+    font-feature-settings: "salt" 9;
+}
+
+h2 {
+    color: var(--color4);
+    font-family: "Bookmania", Georgia, 'Times New Roman', Times, serif;
+    position: absolute;
+    float: right;
+    margin: 0;
+    position: relative;
+    -moz-font-feature-settings: "salt" 9;
+    -webkit-font-feature-settings: "salt" 9;
+    font-feature-settings: "salt" 9;
+}
+
+h4 {
+    font-size: 1.6rem;
+    line-height: 2.1rem;
+}
+
+
+.star {
+    position: relative;
+    cursor: pointer;
+    opacity: 0;
+    color: var(--color4);
+    transform: rotate(80deg);
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+    margin-right: 0.2rem;
+  }
+
+  
+h3 {
+    display: block;
+    margin-right: calc(7% - 32px);
+    padding: 0;
+    font-size: 1.5rem;
+    line-height: 2rem;
+
+    position: relative;
+    left: -25px;
+  }
+  
+  h3 a:link {
+    text-decoration: none;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
+    color: var(--color4);
+  }
+  
+  h3 a:active,
+  h3 a:visited {
+    color: var(--color4);
+  }
+  
+  h3 a:hover {
+    color: var(--color1);
+  }
+  
+  
+  h3:hover .star {
+    opacity: 100;
+    color: var(--color1);
+    display: inline-block;
+    transform: rotate(0deg);
+  }
+  
+  h3 a:link::before {
+    content: '';
+    position: absolute;
+    width: 200%;
+    min-width: 80px;
+    height: 300%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+  }
+
+.menu-btn {
+    display: none;
+}
+
+
+.menu {
+    display: none;
+    max-height: 0;
+    transition: max-height 0.2s ease-out;
+}
+
+.menu-btn:checked~.menu {
+    display: inline;
+}
+
+.menu-icon {
+    display: inline;
+    color: var(--color4);
+    user-select: none;
+    font-size: 2rem;
+}
+
+.navicon {
+    display:inline-block;
+    transition: transform 0.2s;
+    /* width: 1rem; */
+}
+
+.navicon:hover {
+
+    transform: scale(1.2);
+
+}
+
+.menu-btn:checked~.menu-icon .navicon {
+    transform: rotate(45deg);
+}
+
+.menu-btn:checked~.menu-icon .navicon:hover {
+    transform: rotate(45deg) scale(1.2);
+}
+
+.header {
+    margin-bottom: 8px;
+    background: var(--color3);
+    padding-left: calc(var(--sidepadding) + 8px);
+    padding-right: calc(var(--sidepadding) + 8px);
+    padding-top: 18px;
+    padding-bottom: 14px;
+    width: 100%;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    z-index: 40;
+    border-bottom: #ff7127 solid 7px;
+    max-height: none;
+}
+
+.textblock {
+    border: solid 7px var(--color4);
+    border-radius: 26px;
+    padding: 12px;
+    background: var(--color3);
+    color: var(--color4);
+    margin-bottom: 16px;
+}
+
+#background .p5Canvas {
+    z-index: -1;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+a:link {
+    color: var(--color4);
+}
+
+a:active,
+a:visited,
+a:hover {
+    color: var(--color1);
+}
+#popup {
+    display: none;
+    z-index: 60;
+    position: fixed;
+    left: 50vw;
+    transform: translate(-50%,0);
+    border-radius: 26px;
+    max-width: 84vw;
+    max-height: 90vh;
+    min-height: 0px;
+    background-color: var(--color3);
+    /* padding: 16px; */
+    /* margin-left: 8vw;
+    margin-right: 8vw; */
+    overflow: scroll;
+}
+.bar{
+    width: 100%;
+    display:flex;
+    padding: 1rem;
+    padding-bottom: 0.6rem;
+    position: sticky;
+    background: var(--color3);
+    top: 0;
+    z-index: 62;
+}
+
+#expandedImg {
+    position: relative;
+    display: block;
+    left: 50%;
+    transform: translate(-50%,0);
+    height: 50vh;
+    /* margin-left: 1rem;
+    margin-right: 1rem; */
+    max-width: 850px;
+}
+
+.closebtn {
+    position: absolute;
+    /* top: calc(50% + 2px); */
+    /* transform: translate(0,-50%); */
+    right: 15px;
+    color: var(--color4);
+    font-size: 35px;
+    cursor: pointer;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li::before {
+    content: "★ ";
+}
+
+.roundimg {
+    border-radius: 26px;
+    border: var(--color3) solid 7px;
+}
+
+.sticky {
+    top: 70px;
+    position: sticky;
+}

@@ -1,0 +1,104 @@
+* {
+    --color1: #ffb27f;
+    --color2: #3ed373;
+    --color3: #371717;
+    --color4: #ff7127;
+    --color5: #754ed0;
+    --sidepadding:16%;
+    --sidemargine:-8px;
+
+    box-sizing: border-box;
+    outline: none;
+    padding: 0;
+    margin: 0;
+
+}
+
+::selection {
+    color: var(--color3);
+    background: var(--color2);
+}
+
+@font-face {
+    font-family: 'Authentic Sans 90';
+    src: url('./fonts/AUTHENTICSans-90.otf');
+}
+
+@font-face {
+    font-family: 'Authentic Sans 60';
+    src: url('./fonts/AUTHENTICSans-60.otf');
+}
+
+@font-face {
+    font-family: 'Bookmania';
+    src: url('./fonts/Bookmania\ Bold\ Italic.otf');
+}
+
+body {
+    background: var(--color5);
+    font-family: "Authentic Sans 90", Verdana, sans-serif;
+    margin: 0;
+    font-size: 1.3em;
+    line-height: 1.5rem;
+    /* min-height: 50vh; */
+    background-attachment: fixed;
+    color: var(--color4);
+}
+
+.s1 {
+    width: 8.33333333333%;
+}
+
+.s2 {
+    width: 16.6666666667%;
+}
+
+.s3 {
+    width: 25%;
+}
+
+.s4 {
+    width: 33.3333333333%;
+}
+
+.s5 {
+    width: 41.6666666667%;
+}
+
+.s6 {
+    width: 50%;
+}
+
+.s7 {
+    width: 58.3333333333%;
+}
+
+.s8 {
+    width: 66.6666666667%;
+}
+
+.s9 {
+    width: 75;
+}
+
+.s10 {
+    width: 83.3333333333%;
+}
+
+.s11 {
+    width: 91.6666666667;
+}
+
+.s12 {
+    width: 100%;
+}
+
+.row {
+    display: block;
+}
+
+.col {
+    vertical-align: top;
+    display: inline-block;
+    padding: 8px;
+}
