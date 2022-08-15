@@ -9,5 +9,4 @@
                 <h3><span class="star">★</span><a href="dj.php" class="">DJ</a></h3>
                 <h3><span class="star">★</span><a href="about-contact.php" class="">About / Contact</a></h3>
         </div>
-
 </header>
