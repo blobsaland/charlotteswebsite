@@ -53,6 +53,11 @@
         cursor: pointer;
         transform: rotate(-2deg) scale(0.9);
     }
+
+    #expandedImg {
+        height: auto;
+        width: 100%;
+    }
 }
 
 

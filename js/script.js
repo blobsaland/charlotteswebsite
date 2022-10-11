@@ -63,14 +63,6 @@ const imgs = [
   fileName : "main.jpg",
   fileNameComp : "main comp.jpg",
 
-  folder : "The Dutch Drug Industry",
-  title : "The Dutch Drug Industry",
-  discription: "a zine I made about the diversity and unpredictability of the dutch drug industry.",
-  sketches : []
-},{
-  fileName : "main.jpg",
-  fileNameComp : "main comp.jpg",
-
   folder : "Lentekriebels",
   title : "Lentekriebels",
   discription: "cover drawing I did for my first DJ set.",
@@ -107,10 +99,82 @@ const imgs = [
   title : "Verdwaald",
   discription: "illustration about the claustrophobia of the city on black paper with oil pastels.",
   sketches : []
-}
+},{
+  fileName : "beer challenge.jpg",
+  folder : "Sketches",
+  title : "beer challenge",
+},{
+  fileName : "bootsy.jpg",
+  folder : "Sketches",
+  title : "bootsy",
+},{
+  fileName : "eng wijf lekker aan het roken.jpg",
+  folder : "Sketches",
+  title : "eng wijf lekker aan het roken",
+},{
+  fileName : "kijken naar de wolken.jpg",
+  folder : "Sketches",
+  title : "kijken naar de wolken",
+},{
+  fileName : "leon droom.jpg",
+  folder : "Sketches",
+  title : "leon droom",
+},{
+  fileName : "monster reeks 1.jpg",
+  folder : "Sketches",
+  title : "monster reeks 1",
+},{
+  fileName : "monster reeks 2.jpg",
+  folder : "Sketches",
+  title : "monster reeks 2",
+},{
+  fileName : "monster reeks 3.jpg",
+  folder : "Sketches",
+  title : "monster reeks 3",
+},{
+  fileName : "monster reeks 4.jpg",
+  folder : "Sketches",
+  title : "monster reeks 4",
+},{
+  fileName : "naakt.jpg",
+  folder : "Sketches",
+  title : "naakt",
+},{
+  fileName : "nix flix.jpg",
+  folder : "Sketches",
+  title : "nix flix",
+},{
+  fileName : "paddenstoel met maan.jpg",
+  folder : "Sketches",
+  title : "paddenstoel met maan",
+},{
+  fileName : "papa 51.jpg",
+  folder : "Sketches",
+  title : "papa 51",
+},{
+  fileName : "slurpen.jpg",
+  folder : "Sketches",
+  title : "slurpen",
+},{
+  fileName : "spaans koppel.jpg",
+  folder : "Sketches",
+  title : "spaans koppel",
+},{
+  fileName : "strand schets.jpg",
+  folder : "Sketches",
+  title : "strand schets",
+},{
+  fileName : "studio 54.jpg",
+  folder : "Sketches",
+  title : "studio 54",
+},{
+  fileName : "verdwaald.jpg",
+  folder : "Sketches",
+  title : "verdwaald",
+},
 ]
 
-const sketches = ["1.jpg","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg","7.jpg","8.jpg","9.jpg","10.jpg","11.jpg","12.jpg","13.jpg","14.jpg","16.jpg","17.jpg","18.jpg","19.jpg","20.jpg","21.jpg"]
+// const sketches = ["1.jpg","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg","7.jpg","8.jpg","9.jpg","10.jpg","11.jpg","12.jpg","13.jpg","14.jpg","16.jpg","17.jpg","18.jpg","19.jpg","20.jpg","21.jpg"]
 
 const imgPerCol = Math.ceil(imgs.length/3);
 
@@ -126,9 +190,11 @@ imgs.forEach((e,i)=>{
     popup.style.display = "block";
     expandedImg.src = "imgs/"+e.folder+"/"+e.fileName;
     title.innerHTML = e.title;
-    discription.innerHTML = e.discription;
-    console.log(imgs[i].sketches)
-
+    if(e.discription == undefined){
+      discription.innerHTML = "";
+    }else{
+      discription.innerHTML = e.discription;
+    };
     procces.innerHTML = "";
     imgs[i].sketches.forEach((ee,ii)=>{
       const proccesImage = document.createElement("img");
@@ -141,12 +207,12 @@ imgs.forEach((e,i)=>{
 
 })
 
-sketches.forEach((e,i)=>{
-  console.log(e)
-  const image =  document.createElement("img");
-  image.src  = "imgs/sketches/"+e;
-  image.alt = e;
-  image.classList.add("sketch");
-  sketchBox.appendChild(image);
+// sketches.forEach((e,i)=>{
+//   console.log(e)
+//   const image =  document.createElement("img");
+//   image.src  = "imgs/sketches/"+e;
+//   image.alt = e;
+//   image.classList.add("sketch");
+//   sketchBox.appendChild(image);
 
-})
+// })

@@ -12,7 +12,7 @@
 }
 
 .portfolioGallery {
-    column-count: 3;
+    column-count: 4;
     column-fill: balance;
     column-gap:1rem;
     padding-left: var(--sidepadding);
@@ -286,10 +286,10 @@ a:hover {
     display: block;
     left: 50%;
     transform: translate(-50%,0);
-    height: 50vh;
+    height: 62vh;
     /* margin-left: 1rem;
     margin-right: 1rem; */
-    max-width: 850px;
+    /* max-width: 850px; */
 }
 
 .closebtn {
